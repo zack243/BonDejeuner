@@ -48,15 +48,15 @@ export default function Navbar() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 md:h-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo */}
-          <Link href={`/${locale}/`} className="flex-shrink-0 relative" style={{ width: 200, height: 64 }}>
+          <Link href={`/${locale}/`} className="flex-shrink-0 relative" style={{ width: 240, height: 84 }}>
             <Image
               src="/bon-dejeuner-logo.png"
               alt="Bon Déjeuner"
               fill
-              sizes="148px"
+              sizes="180px"
               className="object-contain"
               priority
             />
@@ -68,7 +68,7 @@ export default function Navbar() {
               <a
                 key={link.anchor}
                 href={link.anchor}
-                className="px-3 lg:px-4 py-2 text-sm font-semibold rounded-full transition-colors"
+                className="px-3 lg:px-5 py-2.5 text-[15px] lg:text-base font-semibold rounded-full transition-colors"
                 style={{ color: "#1D5D2B" }}
                 onMouseEnter={e => (e.currentTarget.style.background = "rgba(29,93,43,0.10)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
@@ -85,12 +85,12 @@ export default function Navbar() {
             <div ref={langRef} className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1 px-3 py-1.5 text-xs font-black rounded-full transition-colors"
+                className="flex items-center gap-1.5 px-3.5 py-2 text-sm font-black rounded-full transition-colors"
                 style={{ background: "#1D5D2B", color: "#F4D233" }}
                 aria-label="Changer de langue"
               >
                 {locale.toUpperCase()}
-                <svg className={`w-3 h-3 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+                <svg className={`w-4 h-4 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
                   fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -121,11 +121,11 @@ export default function Navbar() {
             {/* CTA button */}
             <a
               href="#produits"
-              className="hidden sm:flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 font-black text-sm rounded-full transition-all whitespace-nowrap"
+              className="hidden sm:flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 font-black text-sm md:text-[15px] rounded-full transition-all whitespace-nowrap"
               style={{ background: "#1D5D2B", color: "#F4D233", boxShadow: "0 4px 14px rgba(29,93,43,0.35)" }}
             >
               {t("nav.discover") as string}
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
@@ -138,7 +138,7 @@ export default function Navbar() {
               style={{ color: "#1D5D2B" }}
               aria-label={mobileOpen ? "Fermer" : "Menu"}
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileOpen
                   ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

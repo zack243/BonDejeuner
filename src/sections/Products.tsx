@@ -1,106 +1,195 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 import { initScrollReveal } from "@/lib/scrollReveal";
 
+const ALL_PRODUCTS = [
+  // Céréales
+  { id: "avoine-500", name: "Flocons d'Avoine", category: "cereals", src: "/products/Bon Dejeuner Flacon D’Avoine - 500g.png", tag: "Céréales" },
+  { id: "cereales", name: "Céréales Bon Déjeuner", category: "cereals", src: "/products/Bon Dejeuner.png", tag: "Céréales" },
+  // Confitures
+  { id: "confiture-fruits", name: "Confiture 4 Fruits Rouges", category: "confiture", src: "/products/Confiture  Bon Dejeuner 4 Fruits Rouges.png", tag: "Confiture" },
+  { id: "confiture-abricot", name: "Confiture Abricots", category: "confiture", src: "/products/Confiture  Bon Dejeuner Abricots.png", tag: "Confiture" },
+  { id: "confiture-ananas", name: "Confiture Ananas", category: "confiture", src: "/products/Confiture  Bon Dejeuner Ananas.png", tag: "Confiture" },
+  { id: "confiture-fraise", name: "Confiture Fraises", category: "confiture", src: "/products/Confiture  Bon Dejeuner Fraises.png", tag: "Confiture" },
+  { id: "confiture-orange", name: "Confiture Orange", category: "confiture", src: "/products/Confiture  Bon Dejeuner Orange.png", tag: "Confiture" },
+  // Lait
+  { id: "lait-concentre", name: "Lait Concentré Sucré", category: "dairy", src: "/products/Lait Concentre Sucre Bon Dejeuner.png", tag: "Lait" },
+  // Biscuits
+  { id: "biscuits-100g", name: "Petit Beurre 100g", category: "biscuits", src: "/products/Petit Beurre  Bon Dejeuner Biscuits 100g.png", tag: "Biscuits" },
+  { id: "biscuits-36g", name: "Petit Beurre 36g", category: "biscuits", src: "/products/Petit Beurre  Bon Dejeuner Biscuits 36g.png", tag: "Biscuits" },
+  // Boissons
+  { id: "soya-choco", name: "Soya Choco Milk", category: "drinks", src: "/products/Soya Chocolate Milk - Bon Dejeuner.png", tag: "Boisson" },
+];
+
+const TAG_COLORS: Record<string, { bg: string; text: string }> = {
+  "Céréales": { bg: "#F4D233", text: "#1D5D2B" },
+  "Confiture": { bg: "#D92525", text: "#fff" },
+  "Lait": { bg: "#1D5D2B", text: "#F4D233" },
+  "Biscuits": { bg: "#F59E0B", text: "#1D5D2B" },
+  "Boisson": { bg: "#6B4423", text: "#fff" },
+};
+
 export default function Products() {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
     if (!sectionRef.current) return;
     return initScrollReveal(sectionRef.current);
   }, []);
 
+  const tabs = [
+    { key: "all", label: t("products.tabs.all") },
+    { key: "cereals", label: t("products.tabs.cereals") },
+    { key: "confiture", label: t("products.tabs.confiture") },
+    { key: "dairy", label: t("products.tabs.dairy") },
+    { key: "biscuits", label: t("products.tabs.biscuits") },
+    { key: "drinks", label: t("products.tabs.drinks") },
+  ];
+
+  const filtered = activeTab === "all" ? ALL_PRODUCTS : ALL_PRODUCTS.filter((p) => p.category === activeTab);
+
   return (
     <section id="produits" ref={sectionRef} className="bg-white overflow-hidden py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-          {/* Left — Product image */}
-          <motion.div
-            className="sr-left w-full lg:w-1/2 flex items-center justify-center"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <motion.div
-              className="relative"
-              style={{ width: "clamp(280px, 45vw, 520px)", height: "clamp(280px, 45vw, 520px)" }}
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
-            >
-              <Image
-                src="/images/product.png"
-                alt="Flocons d'Avoine Bon Déjeuner"
-                fill
-                sizes="(max-width: 1024px) 90vw, 45vw"
-                quality={90}
-                priority
-                className="object-contain"
-                style={{ filter: "drop-shadow(0 24px 56px rgba(29,93,43,0.18))" }}
-              />
-            </motion.div>
-          </motion.div>
+        {/* Header */}
+        <div className="sr text-center mb-14">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5 text-xs font-black uppercase tracking-widest"
+            style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#1D5D2B" }} />
+            {t("products.badge")}
+          </span>
+          <h2 className="font-black text-[#222] leading-tight mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
+            {t("products.title")}
+          </h2>
+          <p className="text-[#222]/60 max-w-lg mx-auto">{t("products.subtitle")}</p>
+        </div>
 
-          {/* Right — Text + CTA */}
-          <motion.div
-            className="sr w-full lg:w-1/2 flex flex-col items-start text-left"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs font-black uppercase tracking-widest"
-              style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#1D5D2B" }} />
-              {t("products.badge") as string}
-            </span>
-
-            <h2 className="font-black text-[#222] leading-tight mb-4" style={{ fontSize: "clamp(2rem,4.5vw,3.5rem)" }}>
-              {t("products.title") as string}
-            </h2>
-
-            <p className="text-[#222]/60 text-lg leading-relaxed mb-6 max-w-md">
-              {t("products.subtitle") as string}
-            </p>
-
-            <p className="text-[#222]/70 leading-relaxed mb-8 max-w-lg">
-              {t("products.description") as string}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 mb-8">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "#FFF8EC" }}>
-                <span className="w-2 h-2 rounded-full" style={{ background: "#4F8F38" }} />
-                <span className="text-xs font-black text-[#1D5D2B] uppercase tracking-wider">100% Naturel</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "#FFF8EC" }}>
-                <span className="w-2 h-2 rounded-full" style={{ background: "#F59E0B" }} />
-                <span className="text-xs font-black text-[#1D5D2B] uppercase tracking-wider">Riche en Fibres</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ background: "#FFF8EC" }}>
-                <span className="w-2 h-2 rounded-full" style={{ background: "#D92525" }} />
-                <span className="text-xs font-black text-[#1D5D2B] uppercase tracking-wider">Énergie Matinale</span>
-              </div>
-            </div>
-
-            <motion.a
-              href="#contact"
+        {/* Tabs */}
+        <div className="sr sr-d1 flex gap-2 flex-wrap justify-center mb-12">
+          {tabs.map((tab) => (
+            <motion.button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-black text-sm"
-              style={{ background: "#1D5D2B", color: "#F4D233", boxShadow: "0 8px 24px rgba(29,93,43,0.35)" }}
+              className="px-4 py-2 rounded-full text-sm font-bold transition-all duration-300"
+              style={
+                activeTab === tab.key
+                  ? { background: "#1D5D2B", color: "#F4D233", boxShadow: "0 4px 16px rgba(29,93,43,0.25)" }
+                  : { background: "rgba(29,93,43,0.07)", color: "#1D5D2B" }
+              }
             >
-              Commander maintenant
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </motion.a>
+              {tab.label as string}
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Product Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-6"
+          >
+            {filtered.map((product, i) => {
+              const tagColor = TAG_COLORS[product.tag] ?? { bg: "#1D5D2B", text: "#fff" };
+              return (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.04, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  className="group relative flex flex-col cursor-pointer"
+                  style={{ borderRadius: 24 }}
+                  whileHover={{ y: -8 }}
+                >
+                  {/* Card shell */}
+                  <div className="relative flex flex-col overflow-hidden h-full transition-all duration-300"
+                    style={{
+                      borderRadius: 24,
+                      background: "#fff",
+                      border: "1.5px solid rgba(29,93,43,0.07)",
+                      boxShadow: "0 4px 20px rgba(29,93,43,0.08)",
+                    }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 48px ${tagColor.bg}44, 0 4px 16px rgba(0,0,0,0.08)`;
+                      (e.currentTarget as HTMLElement).style.borderColor = tagColor.bg;
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(29,93,43,0.08)";
+                      (e.currentTarget as HTMLElement).style.borderColor = "rgba(29,93,43,0.07)";
+                    }}
+                  >
+                    {/* Image area with colored bg */}
+                    <div className="relative overflow-hidden flex items-center justify-center"
+                      style={{
+                        height: "clamp(140px, 19vw, 210px)",
+                        background: `linear-gradient(145deg, ${tagColor.bg}18 0%, ${tagColor.bg}08 100%)`,
+                        borderRadius: "22px 22px 0 0",
+                      }}>
+                      {/* Subtle radial glow on hover */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+                        style={{ background: `radial-gradient(circle at 50% 60%, ${tagColor.bg}30 0%, transparent 70%)` }}
+                      />
+                      <Image
+                        src={product.src}
+                        alt={product.name}
+                        fill
+                        sizes="(max-width:640px) 45vw, (max-width:1024px) 30vw, 220px"
+                        quality={75}
+                        loading="lazy"
+                        className="object-contain transition-transform duration-500 group-hover:scale-[1.12] p-3"
+                        style={{ filter: "drop-shadow(0 8px 20px rgba(0,0,0,0.22))" }}
+                      />
+                    </div>
+
+                    {/* Bottom content */}
+                    <div className="flex flex-col items-center text-center px-3 pt-3 pb-4 gap-2">
+                      {/* Tag badge */}
+                      <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full"
+                        style={{ background: tagColor.bg, color: tagColor.text }}>
+                        {product.tag}
+                      </span>
+                      <h3 className="font-black text-[#1a1a1a] text-sm leading-tight">{product.name}</h3>
+                      <span className="inline-flex items-center gap-1 text-[11px] font-black transition-all duration-300 group-hover:gap-2"
+                        style={{ color: "#1D5D2B" }}>
+                        {t("products.discover") as string}
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </motion.div>
+        </AnimatePresence>
+
+        {/* View all CTA */}
+        <div className="sr sr-d2 text-center mt-12">
+          <motion.a
+            href="#categories"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm"
+            style={{ border: "2px solid rgba(29,93,43,0.2)", color: "#1D5D2B" }}
+          >
+            {t("products.viewAll") as string}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </motion.a>
         </div>
       </div>
     </section>

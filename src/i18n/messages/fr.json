@@ -24,27 +24,24 @@
     "ctaSecondary": "En savoir plus"
   },
   "products": {
-    "badge": "Notre Produit",
-    "title": "Flocons d'Avoine Bon Déjeuner",
-    "subtitle": "Une céréale saine, riche en énergie et parfaite pour toute la famille.",
-    "description": "Nos flocons d'avoine Bon Déjeuner sont soigneusement sélectionnés pour offrir un petit-déjeuner nutritif, savoureux et plein d'énergie. Riches en fibres et en protéines végétales, ils accompagnent les familles congolaises dès le matin pour une journée dynamique et équilibrée.",
+    "badge": "Notre Gamme",
+    "title": "Tous Nos Produits",
+    "subtitle": "Une gamme complète pour un petit-déjeuner savoureux et énergétique.",
     "tabs": {
       "all": "Tous",
-      "sauces": "Sauces",
+      "cereals": "Céréales",
+      "confiture": "Confitures",
       "dairy": "Produits Laitiers",
-      "canned": "Conserves",
-      "pasta": "Pâtes",
-      "seafood": "Produits de la Mer",
-      "bakery": "Boulangerie",
-      "sweets": "Gourmandises"
+      "biscuits": "Biscuits",
+      "drinks": "Boissons"
     },
     "discover": "Découvrir",
     "viewAll": "Voir toute la gamme"
   },
   "phares": {
-    "badge": "Produit Phare",
-    "title": "Notre Incontournable",
-    "subtitle": "Le produit qui fait la fierté de Bon Déjeuner",
+    "badge": "Produits Phares",
+    "title": "Nos Incontournables",
+    "subtitle": "Les produits qui font la fierté de Bon Déjeuner",
     "discover": "Découvrir le produit",
     "items": [
       {
@@ -53,19 +50,19 @@
         "tag": "Céréales"
       },
       {
-        "name": "Bon Déjeuner Energy",
-        "desc": "Un mélange nutritionnel conçu pour apporter énergie et vitalité dès le matin.",
-        "tag": "Énergie"
+        "name": "Soya Choco Bon Déjeuner",
+        "desc": "Une boisson chocolatée onctueuse et savoureuse pour bien démarrer la journée avec énergie.",
+        "tag": "Boisson"
       },
       {
-        "name": "Bon Déjeuner Kids",
-        "desc": "Une céréale savoureuse et nutritive spécialement pensée pour le bonheur des enfants.",
-        "tag": "Famille"
+        "name": "Confiture 4 Fruits Rouges",
+        "desc": "Une confiture gourmande aux fruits rouges, idéale pour accompagner pain et petit-déjeuner.",
+        "tag": "Confiture"
       },
       {
-        "name": "Bon Déjeuner Nature",
-        "desc": "Des flocons d'avoine 100% naturels, sans sucres ajoutés, pour une alimentation saine.",
-        "tag": "Naturel"
+        "name": "Petit Beurre Bon Déjeuner",
+        "desc": "Des biscuits croustillants et fondants pour un moment de plaisir en famille au petit-déjeuner.",
+        "tag": "Biscuits"
       }
     ]
   },
@@ -74,13 +71,11 @@
     "title": "Une Gamme Complète",
     "subtitle": "Chaque catégorie pensée pour enrichir votre petit-déjeuner",
     "items": [
-      { "name": "Céréales & Flocons", "desc": "Flocons d'avoine natures et enrichis" },
-      { "name": "Produits Laitiers", "desc": "Lait en poudre 400g, 900g, 1.8kg" },
-      { "name": "Petit-déjeuner Complet", "desc": "Mélanges nutritifs et énergétiques" },
-      { "name": "Boissons", "desc": "Lait, chocolat et boissons du matin" },
-      { "name": "Snacks Sains", "desc": "Barres de céréales et en-cas nutritifs" },
-      { "name": "Boulangerie", "desc": "Levure Sèche Instantanée" },
-      { "name": "Gourmandises", "desc": "Choco Duo" }
+      { "name": "Céréales", "desc": "Flocons d'avoine nutritifs" },
+      { "name": "Confitures", "desc": "Fraises, abricots, fruits rouges..." },
+      { "name": "Produits Laitiers", "desc": "Lait concentré sucré" },
+      { "name": "Biscuits", "desc": "Petit Beurre croquant et fondant" },
+      { "name": "Boissons", "desc": "Soya Choco Milk" }
     ]
   },
   "recipes": {

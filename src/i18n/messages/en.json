@@ -24,27 +24,24 @@
     "ctaSecondary": "Learn more"
   },
   "products": {
-    "badge": "Our Product",
-    "title": "Bon Déjeuner Oat Flakes",
-    "subtitle": "A healthy cereal, rich in energy and perfect for the whole family.",
-    "description": "Our Bon Déjeuner oat flakes are carefully selected to offer a nutritious, tasty and energy-packed breakfast. Rich in fiber and plant-based proteins, they accompany Congolese families from the morning for a dynamic and balanced day.",
+    "badge": "Our Range",
+    "title": "All Our Products",
+    "subtitle": "A complete range for a tasty and energetic breakfast.",
     "tabs": {
       "all": "All",
-      "sauces": "Sauces",
+      "cereals": "Cereals",
+      "confiture": "Jams",
       "dairy": "Dairy",
-      "canned": "Canned Goods",
-      "pasta": "Pasta",
-      "seafood": "Seafood",
-      "bakery": "Bakery",
-      "sweets": "Sweet Treats"
+      "biscuits": "Biscuits",
+      "drinks": "Drinks"
     },
     "discover": "Discover",
     "viewAll": "View full range"
   },
   "phares": {
-    "badge": "Featured Product",
-    "title": "Our Must-Have",
-    "subtitle": "The product that makes Bon Déjeuner proud",
+    "badge": "Featured Products",
+    "title": "Our Favorites",
+    "subtitle": "The products that make Bon Déjeuner proud",
     "discover": "Discover product",
     "items": [
       {
@@ -53,19 +50,19 @@
         "tag": "Cereals"
       },
       {
-        "name": "Bon Déjeuner Energy",
-        "desc": "A nutritional blend designed to bring energy and vitality from the morning.",
-        "tag": "Energy"
+        "name": "Soya Choco Bon Déjeuner",
+        "desc": "A smooth and tasty chocolate drink to start the day with energy.",
+        "tag": "Drink"
       },
       {
-        "name": "Bon Déjeuner Kids",
-        "desc": "A tasty and nutritious cereal specially made for children's happiness.",
-        "tag": "Family"
+        "name": "4 Red Berries Jam",
+        "desc": "A delicious red berry jam, ideal to accompany bread and breakfast.",
+        "tag": "Jam"
       },
       {
-        "name": "Bon Déjeuner Nature",
-        "desc": "100% natural oat flakes, with no added sugars, for healthy eating.",
-        "tag": "Natural"
+        "name": "Bon Déjeuner Petit Beurre",
+        "desc": "Crunchy and melt-in-your-mouth biscuits for a family breakfast moment.",
+        "tag": "Biscuits"
       }
     ]
   },
@@ -74,13 +71,11 @@
     "title": "A Complete Range",
     "subtitle": "Each category designed to enrich your breakfast",
     "items": [
-      { "name": "Cereals & Flakes", "desc": "Natural and enriched oat flakes" },
-      { "name": "Dairy Products", "desc": "Powdered milk 400g, 900g, 1.8kg" },
-      { "name": "Complete Breakfast", "desc": "Nutritious and energetic blends" },
-      { "name": "Beverages", "desc": "Milk, chocolate and morning drinks" },
-      { "name": "Healthy Snacks", "desc": "Cereal bars and nutritious snacks" },
-      { "name": "Bakery", "desc": "Instant Dry Yeast" },
-      { "name": "Sweet Treats", "desc": "Choco Duo" }
+      { "name": "Cereals", "desc": "Nutritious oat flakes" },
+      { "name": "Jams", "desc": "Strawberry, apricot, red berries..." },
+      { "name": "Dairy", "desc": "Sweetened condensed milk" },
+      { "name": "Biscuits", "desc": "Crunchy Petit Beurre" },
+      { "name": "Drinks", "desc": "Soya Choco Milk" }
     ]
   },
   "recipes": {
