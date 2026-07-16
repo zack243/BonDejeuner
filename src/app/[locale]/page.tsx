@@ -1,7 +1,5 @@
 import Hero from "@/sections/Hero";
 import Products from "@/sections/Products";
-import Phares from "@/sections/Phares";
-import Categories from "@/sections/Categories";
 import Recipes from "@/sections/Recipes";
 import Values from "@/sections/Values";
 import About from "@/sections/About";
@@ -13,8 +11,6 @@ export default function Home() {
     <>
       <Hero />
       <Products />
-      <Phares />
-      <Categories />
       <Recipes />
       <Values />
       <About />

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Bon Appétit RDC — Your Complete Kitchen",
-    "description": "Bon Appétit is a complete family food brand accompanying Congolese families at every daily meal.",
-    "keywords": "bon appétit, food, kitchen, family, DRC, Congo, sauces, milk, canned goods, pasta, makayabu"
+    "title": "Bon Déjeuner RDC — Your Morning Energy",
+    "description": "Bon Déjeuner is a breakfast and cereal brand accompanying Congolese families with energy and nutrition every morning.",
+    "keywords": "bon dejeuner, cereals, breakfast, oatmeal, energy, nutrition, family, DRC, Congo"
   },
   "nav": {
     "home": "Home",
@@ -14,19 +14,20 @@
     "discover": "Discover our products"
   },
   "hero": {
-    "badge": "BON APPÉTIT RDC",
-    "tagline": "BON APPÉTIT RDC",
-    "title": "YOUR COMPLETE KITCHEN",
-    "line1": "Your Complete",
-    "line2": "Kitchen.",
-    "subtitle": "A wide range of food products to accompany every daily meal.",
+    "badge": "BON DÉJEUNER RDC",
+    "tagline": "BON DÉJEUNER RDC",
+    "title": "YOUR MORNING ENERGY",
+    "line1": "Your Morning",
+    "line2": "Energy.",
+    "subtitle": "Nutritious and tasty cereals to start every day with the family.",
     "ctaPrimary": "Discover our Products",
     "ctaSecondary": "Learn more"
   },
   "products": {
-    "badge": "Our Range",
-    "title": "All Our Products",
-    "subtitle": "A complete food range for every moment in your kitchen",
+    "badge": "Our Product",
+    "title": "Bon Déjeuner Oat Flakes",
+    "subtitle": "A healthy cereal, rich in energy and perfect for the whole family.",
+    "description": "Our Bon Déjeuner oat flakes are carefully selected to offer a nutritious, tasty and energy-packed breakfast. Rich in fiber and plant-based proteins, they accompany Congolese families from the morning for a dynamic and balanced day.",
     "tabs": {
       "all": "All",
       "sauces": "Sauces",
@@ -41,93 +42,93 @@
     "viewAll": "View full range"
   },
   "phares": {
-    "badge": "Featured Products",
-    "title": "Our Iconic Products",
-    "subtitle": "The products that make Bon Appétit proud",
+    "badge": "Featured Product",
+    "title": "Our Must-Have",
+    "subtitle": "The product that makes Bon Déjeuner proud",
     "discover": "Discover product",
     "items": [
       {
-        "name": "Bon Appétit Milk",
-        "desc": "A rich and creamy powdered milk, formulated for the whole Congolese family. Available in 400g, 900g and 1.8kg formats.",
-        "tag": "Dairy"
+        "name": "Bon Déjeuner Oat Flakes",
+        "desc": "Nourishing oat flakes rich in fiber, perfect for a balanced and energetic breakfast.",
+        "tag": "Cereals"
       },
       {
-        "name": "Bon Appétit Mayonnaise",
-        "desc": "Smooth, tasty and creamy. The ideal mayonnaise to elevate your homemade recipes.",
-        "tag": "Sauces"
+        "name": "Bon Déjeuner Energy",
+        "desc": "A nutritional blend designed to bring energy and vitality from the morning.",
+        "tag": "Energy"
       },
       {
-        "name": "Bon Appétit Ketchup",
-        "desc": "A delicious tomato ketchup, perfect to accompany fries, burgers and all your cravings.",
-        "tag": "Sauces"
+        "name": "Bon Déjeuner Kids",
+        "desc": "A tasty and nutritious cereal specially made for children's happiness.",
+        "tag": "Family"
       },
       {
-        "name": "Bon Appétit Makayabu",
-        "desc": "The iconic salted fish of Congolese cuisine, prepared according to local traditions.",
-        "tag": "Seafood"
+        "name": "Bon Déjeuner Nature",
+        "desc": "100% natural oat flakes, with no added sugars, for healthy eating.",
+        "tag": "Natural"
       }
     ]
   },
   "categories": {
     "badge": "Our Categories",
     "title": "A Complete Range",
-    "subtitle": "Each category designed to enrich your cooking",
+    "subtitle": "Each category designed to enrich your breakfast",
     "items": [
-      { "name": "Sauces & Condiments", "desc": "Mayonnaise, Ketchup, Mustard" },
+      { "name": "Cereals & Flakes", "desc": "Natural and enriched oat flakes" },
       { "name": "Dairy Products", "desc": "Powdered milk 400g, 900g, 1.8kg" },
-      { "name": "Canned Goods", "desc": "Vegetables, Corned Beef, Pilchards" },
-      { "name": "Seafood", "desc": "Makayabu, Sardines" },
-      { "name": "Pasta", "desc": "Macaroni, Penne, Fusilli" },
+      { "name": "Complete Breakfast", "desc": "Nutritious and energetic blends" },
+      { "name": "Beverages", "desc": "Milk, chocolate and morning drinks" },
+      { "name": "Healthy Snacks", "desc": "Cereal bars and nutritious snacks" },
       { "name": "Bakery", "desc": "Instant Dry Yeast" },
       { "name": "Sweet Treats", "desc": "Choco Duo" }
     ]
   },
   "recipes": {
     "badge": "Recipes & Inspiration",
-    "title": "Cook with Bon Appétit",
-    "subtitle": "Delicious ideas for every meal",
+    "title": "Cook with Bon Déjeuner",
+    "subtitle": "Delicious ideas for a balanced breakfast",
     "readMore": "See recipe",
     "items": [
-      { "title": "Fried Chicken & Mayonnaise", "cat": "Sauce", "time": "45 min", "level": "Easy" },
-      { "title": "Golden Homemade Fries", "cat": "Sauce", "time": "30 min", "level": "Easy" },
-      { "title": "Family Breakfast", "cat": "Milk", "time": "15 min", "level": "Very easy" },
-      { "title": "Makayabu Fish Stew", "cat": "Seafood", "time": "60 min", "level": "Medium" },
-      { "title": "Bon Appétit Spaghetti", "cat": "Pasta", "time": "25 min", "level": "Easy" },
-      { "title": "Burger & Homemade Ketchup", "cat": "Sauce", "time": "40 min", "level": "Medium" }
+      { "title": "Oat flake porridge", "cat": "Cereals", "time": "10 min", "level": "Very easy" },
+      { "title": "Morning energy smoothie", "cat": "Beverage", "time": "5 min", "level": "Very easy" },
+      { "title": "Homemade Bon Déjeuner granola", "cat": "Cereals", "time": "25 min", "level": "Easy" },
+      { "title": "Oat flake pancakes", "cat": "Pastry", "time": "20 min", "level": "Easy" },
+      { "title": "Family breakfast bowl", "cat": "Healthy", "time": "15 min", "level": "Very easy" },
+      { "title": "Fermented milk with cereals", "cat": "Milk", "time": "10 min", "level": "Easy" }
     ]
   },
   "values": {
     "badge": "Our Values",
     "title": "What Guides Us",
-    "subtitle": "The pillars that define the Bon Appétit brand",
+    "subtitle": "The pillars that define the Bon Déjeuner brand",
     "items": [
-      { "key": "quality", "title": "Quality", "desc": "Products made to the highest standards for your table." },
-      { "key": "flavor", "title": "Flavor", "desc": "Authentic tastes that make the whole family smile at every meal." },
-      { "key": "trust", "title": "Trust", "desc": "A reliable brand present in Congolese households for years." },
+      { "key": "quality", "title": "Quality", "desc": "Cereals and ingredients selected to the highest standards for your family." },
+      { "key": "flavor", "title": "Flavor", "desc": "Authentic and delicious tastes that delight young and old from the morning." },
+      { "key": "trust", "title": "Trust", "desc": "A reliable brand present in Congolese households every day." },
       { "key": "availability", "title": "Availability", "desc": "Our products accessible everywhere across the national territory." },
-      { "key": "innovation", "title": "Innovation", "desc": "We constantly innovate to enrich your daily food experience." }
+      { "key": "innovation", "title": "Innovation", "desc": "We constantly innovate to enrich your breakfast and daily life." }
     ]
   },
   "about": {
     "badge": "About Us",
     "title": "A Congolese Family Brand",
-    "text": "Bon Appétit accompanies African families with a wide range of food products designed to enrich every daily meal.",
+    "text": "Bon Déjeuner accompanies African families with cereals and breakfast products designed to provide energy and nutrition at the start of each day.",
     "cta": "Contact us"
   },
   "stats": {
     "badge": "Our Numbers",
-    "title": "Bon Appétit by the Numbers",
+    "title": "Bon Déjeuner by the Numbers",
     "items": [
-      { "value": "20", "suffix": "+", "label": "Products" },
+      { "value": "5", "suffix": "+", "label": "Products" },
       { "value": "1000", "suffix": "+", "label": "Sales Points" },
-      { "value": "Millions", "suffix": "", "label": "Meals Prepared" },
+      { "value": "Millions", "suffix": "", "label": "Breakfasts Shared" },
       { "value": "National", "suffix": "", "label": "Presence" }
     ]
   },
   "contact": {
     "badge": "Contact",
-    "title": "Let's Talk Kitchen",
-    "subtitle": "Our team is available for any questions about our products.",
+    "title": "Let's Talk Breakfast",
+    "subtitle": "Our team is available for any questions about our cereals and products.",
     "form": {
       "name": "Name",
       "phone": "Phone",
@@ -144,7 +145,7 @@
     }
   },
   "footer": {
-    "tagline": "Your Complete Kitchen — The food brand for Congolese families",
+    "tagline": "Your Morning Energy — The breakfast brand for Congolese families",
     "links": {
       "company": "Company",
       "products": "Products",

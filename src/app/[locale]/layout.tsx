@@ -47,18 +47,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const msg = messages[locale as Locale] || messages[defaultLocale];
-  const baseUrl = "https://www.bonappetit.cd";
+  const baseUrl = "https://bondejeuner.bnbgroupe.com";
 
   return {
     title: {
       default: msg.metadata.title,
-      template: `%s | Bon Appétit RDC`,
+      template: `%s | Bon Déjeuner RDC`,
     },
     description: msg.metadata.description,
     keywords: msg.metadata.keywords,
-    authors: [{ name: "Bon Appétit RDC" }],
-    creator: "Bon Appétit RDC",
-    publisher: "Bon Appétit RDC",
+    authors: [{ name: "Bon Déjeuner RDC" }],
+    creator: "Bon Déjeuner RDC",
+    publisher: "Bon Déjeuner RDC",
     metadataBase: new URL(baseUrl),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     alternates: {
@@ -69,7 +69,7 @@ export async function generateMetadata({
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       url: `${baseUrl}/${locale}/`,
-      siteName: "Bon Appétit RDC",
+      siteName: "Bon Déjeuner RDC",
       title: msg.metadata.title,
       description: msg.metadata.description,
     },

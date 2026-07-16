@@ -51,10 +51,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* Logo */}
-          <Link href={`/${locale}/`} className="flex-shrink-0 relative" style={{ width: 148, height: 46 }}>
+          <Link href={`/${locale}/`} className="flex-shrink-0 relative" style={{ width: 200, height: 64 }}>
             <Image
-              src="/logo.png"
-              alt="Bon Appétit"
+              src="/bon-dejeuner-logo.png"
+              alt="Bon Déjeuner"
               fill
               sizes="148px"
               className="object-contain"

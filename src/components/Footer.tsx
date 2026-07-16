@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(2)].map((_, ri) => (
             <div key={ri} className="flex items-center gap-12 pr-12 flex-shrink-0">
-              {["Qualité Premium", "Produits Certifiés", "1000+ Points de Vente", "Présence Nationale", "20+ Produits", "Cuisine Complète", "Familles Congolaises"].map((item, i) => (
+              {["Qualité Premium", "Flocons d'Avoine", "1000+ Points de Vente", "Présence Nationale", "Énergie du Matin", "Petit-Déjeuner Complet", "Familles Congolaises"].map((item, i) => (
                 <span key={i} className="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest" style={{ color: "#F4D233" }}>
                   <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "#F4D233" }} />
                   {item}
@@ -81,10 +81,10 @@ export default function Footer() {
 
           {/* Brand col */}
           <div className="md:col-span-2">
-            <div className="relative mb-5" style={{ width: 160, height: 54 }}>
+            <div className="relative mb-5" style={{ width: 220, height: 74 }}>
               <Image
-                src="/logo.png"
-                alt="Bon Appétit"
+                src="/bon-dejeuner-logo.png"
+                alt="Bon Déjeuner"
                 fill
                 sizes="160px"
                 quality={70}
@@ -151,7 +151,7 @@ export default function Footer() {
       <div className="border-t border-[#1D5D2B]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs font-medium" style={{ color: "rgba(29,93,43,0.65)" }}>
-            © {year} Bon Appétit RDC. {t("footer.copyright") as string}
+            © {year} Bon Déjeuner RDC. {t("footer.copyright") as string}
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs font-medium transition-colors"

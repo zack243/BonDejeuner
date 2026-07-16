@@ -6,12 +6,12 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { initScrollReveal } from "@/lib/scrollReveal";
 
 const VIDEOS = [
-  { id: "pdrkhs9fQCc", title: "Recette Poulet & Mayonnaise Bon Appétit",        cat: "Sauce"  },
-  { id: "kdd3S9gJftk", title: "Recette Frites Maison Dorées",                   cat: "Sauce"  },
-  { id: "_-H9_7o4Aps", title: "Petit-déjeuner Familial au Lait Bon Appétit",    cat: "Lait"   },
-  { id: "KXcGOpl3Qnk", title: "Recette Makayabu Mijoté",                        cat: "Mer"    },
-  { id: "ztNIgeqJor4", title: "Spaghetti Bon Appétit",                          cat: "Pâtes"  },
-  { id: "QULG3Ja-DH4", title: "Burger & Ketchup Maison",                        cat: "Sauce"  },
+  { id: "pdrkhs9fQCc", title: "Porridge aux Flocons d'Avoine Bon Déjeuner",     cat: "Céréales" },
+  { id: "kdd3S9gJftk", title: "Smoothie Énergie du Matin",                      cat: "Boisson" },
+  { id: "_-H9_7o4Aps", title: "Petit-déjeuner Familial Bon Déjeuner",            cat: "Céréales" },
+  { id: "KXcGOpl3Qnk", title: "Granola Maison aux Flocons d'Avoine",            cat: "Céréales" },
+  { id: "ztNIgeqJor4", title: "Pancakes aux Flocons Bon Déjeuner",              cat: "Pâtisserie" },
+  { id: "QULG3Ja-DH4", title: "Bol Équilibré du Matin",                         cat: "Healthy" },
 ];
 
 function VideoCard({ video, index }: { video: typeof VIDEOS[0]; index: number }) {

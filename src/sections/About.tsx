@@ -31,8 +31,8 @@ export default function About() {
               }}
             >
               <Image
-                src="/hero.jpg"
-                alt="Bon Appétit — Famille congolaise"
+                src="/images/poster-bondejeuner.jpg"
+                alt="Bon Déjeuner — Énergie du matin pour la famille congolaise"
                 fill
                 sizes="(max-width:1024px) 80vw, 480px"
                 quality={80}

@@ -21,14 +21,14 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Bon Appétit RDC <contact@bonappetit.cd>",
-        to: ["contact@bonappetit.cd"],
+        from: "Bon Déjeuner RDC <contact@bondejeuner.bnbgroupe.com>",
+        to: ["contact@bondejeuner.bnbgroupe.com"],
         reply_to: email,
-        subject: `Nouveau message de ${name} — Bon Appétit RDC`,
+        subject: `Nouveau message de ${name} — Bon Déjeuner RDC`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: #1D5D2B; padding: 24px; border-radius: 12px 12px 0 0;">
-              <h2 style="color: #F4D233; margin: 0; font-size: 22px;">Nouveau message — Bon Appétit RDC</h2>
+              <h2 style="color: #F4D233; margin: 0; font-size: 22px;">Nouveau message — Bon Déjeuner RDC</h2>
             </div>
             <div style="background: #FFF8EC; padding: 24px; border-radius: 0 0 12px 12px; border: 1px solid rgba(29,93,43,0.1);">
               <p><strong>Nom :</strong> ${name}</p>
