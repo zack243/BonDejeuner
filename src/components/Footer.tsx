@@ -56,17 +56,17 @@ export default function Footer() {
   ];
 
   return (
-    <footer style={{ background: "#F4D233", color: "#1D5D2B" }} className="border-t-4 border-[#1D5D2B]/10">
+    <footer style={{ background: "#FDEA02", color: "#026D41" }} className="border-t-4 border-[#026D41]/10">
 
       {/* Marquee band */}
-      <div className="border-b border-[#1D5D2B]/10 overflow-hidden py-3"
-        style={{ background: "#1D5D2B" }}>
+      <div className="border-b border-[#026D41]/10 overflow-hidden py-3"
+        style={{ background: "#026D41" }}>
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(2)].map((_, ri) => (
             <div key={ri} className="flex items-center gap-12 pr-12 flex-shrink-0">
               {["Qualité Premium", "Flocons d'Avoine", "1000+ Points de Vente", "Présence Nationale", "Énergie du Matin", "Petit-Déjeuner Complet", "Familles Congolaises"].map((item, i) => (
-                <span key={i} className="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest" style={{ color: "#F4D233" }}>
-                  <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "#F4D233" }} />
+                <span key={i} className="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest" style={{ color: "#FDEA02" }}>
+                  <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: "#FDEA02" }} />
                   {item}
                 </span>
               ))}
@@ -91,7 +91,7 @@ export default function Footer() {
                 className="object-contain"
               />
             </div>
-            <p className="text-sm leading-relaxed max-w-xs mb-7" style={{ color: "rgba(29,93,43,0.75)" }}>
+            <p className="text-sm leading-relaxed max-w-xs mb-7" style={{ color: "rgba(2,109,65,0.75)" }}>
               {t("footer.tagline") as string}
             </p>
             <div className="flex items-center gap-3">
@@ -103,16 +103,16 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300"
-                  style={{ background: "rgba(29,93,43,0.10)", border: "1.5px solid rgba(29,93,43,0.15)", color: "#1D5D2B" }}
+                  style={{ background: "rgba(2,109,65,0.10)", border: "1.5px solid rgba(2,109,65,0.15)", color: "#026D41" }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "#1D5D2B";
-                    (e.currentTarget as HTMLElement).style.color = "#F4D233";
-                    (e.currentTarget as HTMLElement).style.borderColor = "#1D5D2B";
+                    (e.currentTarget as HTMLElement).style.background = "#026D41";
+                    (e.currentTarget as HTMLElement).style.color = "#FDEA02";
+                    (e.currentTarget as HTMLElement).style.borderColor = "#026D41";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = "rgba(29,93,43,0.10)";
-                    (e.currentTarget as HTMLElement).style.color = "#1D5D2B";
-                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(29,93,43,0.15)";
+                    (e.currentTarget as HTMLElement).style.background = "rgba(2,109,65,0.10)";
+                    (e.currentTarget as HTMLElement).style.color = "#026D41";
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(2,109,65,0.15)";
                   }}
                 >
                   {s.icon}
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Link columns */}
           {cols.map((col) => (
             <div key={col.title as string}>
-              <h3 className="font-black text-sm mb-5 uppercase tracking-widest" style={{ color: "#1D5D2B" }}>
+              <h3 className="font-black text-sm mb-5 uppercase tracking-widest" style={{ color: "#026D41" }}>
                 {col.title as string}
               </h3>
               <ul className="space-y-3">
@@ -133,9 +133,9 @@ export default function Footer() {
                     <a
                       href={link.href}
                       className="text-sm font-medium transition-colors duration-200"
-                      style={{ color: "rgba(29,93,43,0.70)" }}
-                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#1D5D2B"}
-                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(29,93,43,0.70)"}
+                      style={{ color: "rgba(2,109,65,0.70)" }}
+                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#026D41"}
+                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(2,109,65,0.70)"}
                     >
                       {link.label as string}
                     </a>
@@ -148,22 +148,22 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[#1D5D2B]/10">
+      <div className="border-t border-[#026D41]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs font-medium" style={{ color: "rgba(29,93,43,0.65)" }}>
+          <p className="text-xs font-medium" style={{ color: "rgba(2,109,65,0.65)" }}>
             © {year} Bon Déjeuner RDC. {t("footer.copyright") as string}
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs font-medium transition-colors"
-              style={{ color: "rgba(29,93,43,0.65)" }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#1D5D2B"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(29,93,43,0.65)"}>
+              style={{ color: "rgba(2,109,65,0.65)" }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#026D41"}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(2,109,65,0.65)"}>
               {t("footer.legal") as string}
             </a>
             <a href="#" className="text-xs font-medium transition-colors"
-              style={{ color: "rgba(29,93,43,0.65)" }}
-              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#1D5D2B"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(29,93,43,0.65)"}>
+              style={{ color: "rgba(2,109,65,0.65)" }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#026D41"}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(2,109,65,0.65)"}>
               {t("footer.privacy") as string}
             </a>
           </div>

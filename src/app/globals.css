@@ -1,28 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #222222;
-
-  /* Bon Déjeuner Brand Colors */
-  --green: #1D5D2B;
-  --green-light: #4F8F38;
-  --yellow: #F4D233;
-  --red: #D92525;
-  --orange: #F59E0B;
-  --cream: #FFF8EC;
+  --background: #FFFFFF;
+  --foreground: #4A4A4A;
+  --green: #026D41;
+  --green-dark: #345B42;
+  --green-light: #4C753C;
+  --green-fresh: #83AC30;
+  --yellow: #FDEA02;
+  --gold: #C8B612;
+  --red: #A52520;
+  --cream: #FFF6E1;
   --white: #FFFFFF;
-  --dark: #222222;
+  --dark: #4A4A4A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
   --color-green-light: var(--green-light);
+  --color-green-fresh: var(--green-fresh);
   --color-yellow: var(--yellow);
+  --color-gold: var(--gold);
   --color-red: var(--red);
-  --color-orange: var(--orange);
   --color-cream: var(--cream);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
@@ -34,19 +36,21 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: var(--font-body, 'Nunito', sans-serif);
+  font-family: var(--font-body, 'Source Sans 3', sans-serif);
   background: var(--background);
   color: var(--foreground);
   line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -180,4 +184,8 @@ header {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
+
+  h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+  img { max-width: 100%; }
 }

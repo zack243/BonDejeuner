@@ -8,35 +8,35 @@ import { initScrollReveal } from "@/lib/scrollReveal";
 
 const PHARES = [
   {
-    src: "/products/Bon Dejeuner Flacon D’Avoine - 500g.png",
-    bg: "linear-gradient(145deg, #F4D233 0%, #f7dc5a 100%)",
-    solidBg: "#F4D233",
-    accent: "#1D5D2B",
-    glow: "rgba(244,210,51,0.55)",
+    src: "/Products/Bon Dejeuner Flacon D’Avoine - 500g.png",
+    bg: "linear-gradient(145deg, #FDEA02 0%, #C8B612 100%)",
+    solidBg: "#FDEA02",
+    accent: "#026D41",
+    glow: "rgba(253,234,2,0.55)",
     featured: false,
   },
   {
-    src: "/products/Soya Chocolate Milk - Bon Dejeuner.png",
-    bg: "linear-gradient(145deg, #6B4423 0%, #8B5A2B 100%)",
-    solidBg: "#6B4423",
+    src: "/Products/Soya Chocolate Milk - Bon Dejeuner.png",
+    bg: "linear-gradient(145deg, #345B42 0%, #4C753C 100%)",
+    solidBg: "#345B42",
     accent: "#fff",
-    glow: "rgba(107,68,35,0.55)",
+    glow: "rgba(52,91,66,0.55)",
     featured: true,
   },
   {
-    src: "/products/Confiture  Bon Dejeuner 4 Fruits Rouges.png",
-    bg: "linear-gradient(145deg, #D92525 0%, #e83535 100%)",
-    solidBg: "#D92525",
+    src: "/Products/Confiture  Bon Dejeuner 4 Fruits Rouges.png",
+    bg: "linear-gradient(145deg, #A52520 0%, #C8B612 100%)",
+    solidBg: "#A52520",
     accent: "#fff",
-    glow: "rgba(217,37,37,0.45)",
+    glow: "rgba(165,37,32,0.45)",
     featured: false,
   },
   {
-    src: "/products/Petit Beurre  Bon Dejeuner Biscuits 100g.png",
-    bg: "linear-gradient(145deg, #F59E0B 0%, #f7b13c 100%)",
-    solidBg: "#F59E0B",
-    accent: "#1D5D2B",
-    glow: "rgba(245,158,11,0.45)",
+    src: "/Products/Petit Beurre  Bon Dejeuner Biscuits 100g.png",
+    bg: "linear-gradient(145deg, #C8B612 0%, #FDEA02 100%)",
+    solidBg: "#C8B612",
+    accent: "#026D41",
+    glow: "rgba(200,182,18,0.45)",
     featured: false,
   },
 ];
@@ -57,21 +57,21 @@ export default function Phares() {
       id="phares"
       ref={sectionRef}
       className="overflow-hidden py-20 lg:py-28"
-      style={{ background: "linear-gradient(180deg, #fff 0%, #FFF8EC 60%, #fff 100%)" }}
+      style={{ background: "linear-gradient(180deg, #fff 0%, #FFF6E1 60%, #fff 100%)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="sr text-center mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5 text-xs font-black uppercase tracking-widest"
-            style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#F4D233", boxShadow: "0 0 8px #F4D233" }} />
+            style={{ background: "rgba(2,109,65,0.08)", color: "#026D41" }}>
+            <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#FDEA02", boxShadow: "0 0 8px #FDEA02" }} />
             {t("phares.badge") as string}
           </span>
-          <h2 className="font-black text-[#1a1a1a] leading-tight mb-3" style={{ fontSize: "clamp(1.9rem,4vw,3.2rem)" }}>
+          <h2 className="font-black text-[#4A4A4A] leading-tight mb-3" style={{ fontSize: "clamp(1.9rem,4vw,3.2rem)" }}>
             {t("phares.title") as string}
           </h2>
-          <p className="text-[#222]/55 max-w-md mx-auto text-base">{t("phares.subtitle") as string}</p>
+          <p className="text-[#4A4A4A]/55 max-w-md mx-auto text-base">{t("phares.subtitle") as string}</p>
         </div>
 
         {/* Desktop: featured center grid — Mobile: horizontal scroll */}
@@ -105,10 +105,10 @@ export default function Phares() {
                     background: "#fff",
                     border: ph.featured
                       ? `2.5px solid ${ph.solidBg}`
-                      : "1.5px solid rgba(29,93,43,0.08)",
+                      : "1.5px solid rgba(2,109,65,0.08)",
                     boxShadow: ph.featured
                       ? `0 8px 32px ${ph.glow}, 0 2px 8px rgba(0,0,0,0.06)`
-                      : "0 4px 20px rgba(29,93,43,0.07)",
+                      : "0 4px 20px rgba(2,109,65,0.07)",
                     transform: ph.featured ? "translateY(-12px)" : "none",
                   }}
                   onMouseEnter={e => {
@@ -119,10 +119,10 @@ export default function Phares() {
                   onMouseLeave={e => {
                     (e.currentTarget as HTMLElement).style.boxShadow = ph.featured
                       ? `0 8px 32px ${ph.glow}, 0 2px 8px rgba(0,0,0,0.06)`
-                      : "0 4px 20px rgba(29,93,43,0.07)";
+                      : "0 4px 20px rgba(2,109,65,0.07)";
                     (e.currentTarget as HTMLElement).style.borderColor = ph.featured
                       ? ph.solidBg
-                      : "rgba(29,93,43,0.08)";
+                      : "rgba(2,109,65,0.08)";
                   }}
                 >
                   {/* Featured ribbon */}
@@ -192,7 +192,7 @@ export default function Phares() {
                   {/* Content */}
                   <div className="flex flex-col flex-1 px-5 pt-4 pb-5 gap-2">
                     <h3
-                      className="font-black leading-tight text-[#1a1a1a]"
+                      className="font-black leading-tight text-[#4A4A4A]"
                       style={{ fontSize: ph.featured ? "1.15rem" : "1rem" }}
                     >
                       {item.name}
@@ -235,7 +235,7 @@ export default function Phares() {
               style={{
                 width: i === 1 ? 20 : 6,
                 height: 6,
-                background: i === 1 ? "#1D5D2B" : "rgba(29,93,43,0.2)",
+                background: i === 1 ? "#026D41" : "rgba(2,109,65,0.2)",
               }}
             />
           ))}

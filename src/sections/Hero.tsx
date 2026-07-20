@@ -1,14 +1,14 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const PRODUCTS = [
-  { src: "/products/Bon Dejeuner Flacon D’Avoine - 500g.png", name: "Flocons d'Avoine", size: "500g", bg: "#F4D233", accent: "#1D5D2B" },
-  { src: "/products/Soya Chocolate Milk - Bon Dejeuner.png", name: "Soya Choco", size: "1L", bg: "#6B4423", accent: "#fff" },
-  { src: "/products/Petit Beurre  Bon Dejeuner Biscuits 100g.png", name: "Petit Beurre", size: "100g", bg: "#D92525", accent: "#fff" },
+  { src: "/Products/Bon Dejeuner Flacon D’Avoine - 500g.png", name: "Flocons d'Avoine", size: "500g", bg: "#FDEA02", accent: "#026D41" },
+  { src: "/Products/Soya Chocolate Milk - Bon Dejeuner.png", name: "Soya Choco", size: "1L", bg: "#345B42", accent: "#fff" },
+  { src: "/Products/Petit Beurre  Bon Dejeuner Biscuits 100g.png", name: "Petit Beurre", size: "100g", bg: "#A52520", accent: "#fff" },
 ];
 
 const POS = [
@@ -20,17 +20,19 @@ const POS = [
 
 export default function Hero() {
   const { t } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
   const [cardIndex, setCardIndex] = useState(0);
 
   useEffect(() => {
+    if (shouldReduceMotion) return;
     const id = setInterval(() => setCardIndex((i) => (i + 1) % PRODUCTS.length), 5000);
     return () => clearInterval(id);
-  }, []);
+  }, [shouldReduceMotion]);
 
   return (
     <section
       id="accueil"
-      className="relative overflow-hidden bg-[#1D5D2B]"
+      className="relative overflow-hidden bg-[#026D41]"
       style={{ height: "100dvh", minHeight: "580px", maxHeight: "960px" }}
       aria-label="Section hero Bon Déjeuner"
     >
@@ -45,8 +47,8 @@ export default function Hero() {
 
         {/* LEFT 45% — Hero image */}
         <div className="relative shrink-0 overflow-hidden"
-          style={{ width: "45%", height: "100%", display: "flex", alignItems: "flex-end", paddingLeft: "5%" }}>
-          <div className="relative w-full h-full">
+          style={{ width: "38%", height: "100%", display: "flex", alignItems: "flex-end", justifyContent: "center", paddingLeft: "3%" }}>
+          <div className="relative" style={{ width: "86%", height: "88%" }}>
             <Image
               src="/hero-bondejeuner.png"
               alt="Bon Déjeuner — Votre Énergie du Matin"
@@ -82,8 +84,8 @@ export default function Hero() {
                   style={{ position: "absolute", bottom: 0, left: "calc(50% - 150px)", zIndex: pos.zIndex, transformOrigin: "bottom center" }}
                 >
                   <motion.div
-                    animate={{ y: isCenter ? [0, -8, 0] : [0, -4, 0] }}
-                    transition={{ duration: isCenter ? 4 : 5, ease: "easeInOut", repeat: Infinity, delay: i * 0.4 }}
+                    animate={shouldReduceMotion ? { y: 0 } : { y: isCenter ? [0, -8, 0] : [0, -4, 0] }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { duration: isCenter ? 4 : 5, ease: "easeInOut", repeat: Infinity, delay: i * 0.4 }}
                   >
                     <div
                       onClick={() => setCardIndex(i)}
@@ -180,27 +182,27 @@ export default function Hero() {
           {/* Yellow CTA card */}
           <div className="w-full max-w-[620px]">
             <div style={{
-              background: "#F4D233",
+              background: "#FDEA02",
               borderRadius: 22,
               padding: "22px 28px",
-              boxShadow: "0 12px 50px rgba(244,210,51,0.35), 0 4px 20px rgba(0,0,0,0.10)",
+              boxShadow: "0 12px 50px rgba(253,234,2,0.35), 0 4px 20px rgba(0,0,0,0.10)",
               display: "flex",
               alignItems: "center",
               gap: 24,
             }}>
               <div className="flex-1 min-w-0">
                 <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 mb-3 w-fit"
-                  style={{ background: "rgba(29,93,43,0.10)", border: "1px solid rgba(29,93,43,0.15)" }}>
-                  <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#1D5D2B" }} />
-                  <span className="font-black text-[8px] uppercase tracking-[0.12em]" style={{ color: "#1D5D2B" }}>
+                  style={{ background: "rgba(2,109,65,0.10)", border: "1px solid rgba(2,109,65,0.15)" }}>
+                  <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#026D41" }} />
+                  <span className="font-black text-[8px] uppercase tracking-[0.12em]" style={{ color: "#026D41" }}>
                     {t("hero.tagline") as string}
                   </span>
                 </div>
-                <h1 className="font-black leading-[1.15] mb-2" style={{ color: "#1D5D2B", fontSize: "clamp(1.2rem,2.2vw,1.75rem)" }}>
+                <h1 className="font-black leading-[1.15] mb-2" style={{ color: "#026D41", fontSize: "clamp(1.2rem,2.2vw,1.75rem)" }}>
                   {t("hero.line1") as string}{" "}
                   <span>{t("hero.line2") as string}</span>
                 </h1>
-                <p className="leading-[1.55]" style={{ color: "rgba(29,93,43,0.80)", fontSize: "clamp(0.72rem,0.9vw,0.82rem)" }}>
+                <p className="leading-[1.55]" style={{ color: "rgba(2,109,65,0.80)", fontSize: "clamp(0.72rem,0.9vw,0.82rem)" }}>
                   {t("hero.subtitle") as string}
                 </p>
               </div>
@@ -209,7 +211,7 @@ export default function Hero() {
                   href="#produits"
                   whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
                   className="inline-flex items-center gap-2 font-black rounded-full whitespace-nowrap"
-                  style={{ background: "#1D5D2B", color: "#F4D233", fontSize: "0.84rem", padding: "11px 26px" }}
+                  style={{ background: "#026D41", color: "#FDEA02", fontSize: "0.84rem", padding: "11px 26px" }}
                 >
                   {t("hero.ctaPrimary") as string}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -218,7 +220,7 @@ export default function Hero() {
                 </motion.a>
                 <a href="#apropos"
                   className="inline-flex items-center justify-center whitespace-nowrap"
-                  style={{ color: "rgba(29,93,43,0.70)", fontSize: "0.76rem" }}>
+                  style={{ color: "rgba(2,109,65,0.70)", fontSize: "0.76rem" }}>
                   {t("hero.ctaSecondary") as string}
                 </a>
               </div>
@@ -233,34 +235,34 @@ export default function Hero() {
           <Image src="/hero-bondejeuner.png" alt="Bon Déjeuner" fill priority sizes="100vw" quality={75}
             className="object-contain" style={{ objectPosition: "bottom center" }} />
           <div className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"
-            style={{ background: "linear-gradient(to top, rgba(29,93,43,0.6), transparent)" }} />
+            style={{ background: "linear-gradient(to top, rgba(2,109,65,0.6), transparent)" }} />
         </div>
 
         <div className="shrink-0 px-4 pb-2" style={{ marginTop: -16, zIndex: 10, position: "relative" }}>
           <div className="w-full rounded-2xl px-4 py-3.5 flex flex-col gap-1.5"
-            style={{ background: "#F4D233", boxShadow: "0 8px 32px rgba(244,210,51,0.35)" }}>
+            style={{ background: "#FDEA02", boxShadow: "0 8px 32px rgba(253,234,2,0.35)" }}>
             <div className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 w-fit"
-              style={{ background: "rgba(29,93,43,0.10)", border: "1px solid rgba(29,93,43,0.15)" }}>
-              <span className="w-1 h-1 rounded-full animate-pulse" style={{ background: "#1D5D2B" }} />
-              <span className="font-black text-[7px] uppercase tracking-[0.12em]" style={{ color: "#1D5D2B" }}>
+              style={{ background: "rgba(2,109,65,0.10)", border: "1px solid rgba(2,109,65,0.15)" }}>
+              <span className="w-1 h-1 rounded-full animate-pulse" style={{ background: "#026D41" }} />
+              <span className="font-black text-[7px] uppercase tracking-[0.12em]" style={{ color: "#026D41" }}>
                 {t("hero.tagline") as string}
               </span>
             </div>
-            <h1 className="font-black leading-tight text-lg" style={{ color: "#1D5D2B" }}>
+            <h1 className="font-black leading-tight text-lg" style={{ color: "#026D41" }}>
               {t("hero.line1") as string}{" "}{t("hero.line2") as string}
             </h1>
-            <p className="text-[11px] leading-snug" style={{ color: "rgba(29,93,43,0.80)" }}>
+            <p className="text-[11px] leading-snug" style={{ color: "rgba(2,109,65,0.80)" }}>
               {t("hero.subtitle") as string}
             </p>
             <div className="flex items-center gap-3 mt-0.5">
               <a href="#produits" className="inline-flex items-center gap-1.5 px-4 py-2 font-black rounded-full text-xs"
-                style={{ background: "#1D5D2B", color: "#F4D233" }}>
+                style={{ background: "#026D41", color: "#FDEA02" }}>
                 {t("hero.ctaPrimary") as string}
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a href="#apropos" className="text-[11px]" style={{ color: "rgba(29,93,43,0.70)" }}>
+              <a href="#apropos" className="text-[11px]" style={{ color: "rgba(2,109,65,0.70)" }}>
                 {t("hero.ctaSecondary") as string}
               </a>
             </div>

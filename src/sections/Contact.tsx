@@ -41,24 +41,24 @@ export default function Contact() {
 
   const formT = t("contact.form") as Record<string, string>;
 
-  const inputClass = "w-full px-4 py-3 rounded-xl text-sm font-medium outline-none transition-all duration-200 bg-white border border-[rgba(29,93,43,0.15)] text-[#222] placeholder:text-[#222]/40 focus:border-[#1D5D2B] focus:ring-2 focus:ring-[rgba(29,93,43,0.12)]";
+  const inputClass = "w-full px-4 py-3 rounded-xl text-sm font-medium outline-none transition-all duration-200 bg-white border border-[rgba(2,109,65,0.15)] text-[#4A4A4A] placeholder:text-[#4A4A4A]/40 focus:border-[#026D41] focus:ring-2 focus:ring-[rgba(2,109,65,0.12)]";
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 lg:py-28 overflow-hidden" style={{ background: "#FFF8EC" }}>
+    <section id="contact" ref={sectionRef} className="py-20 lg:py-28 overflow-hidden" style={{ background: "#FFF6E1" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
 
           {/* Left info */}
           <div className="sr-left flex-shrink-0 lg:w-[400px]">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs font-black uppercase tracking-widest"
-              style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#1D5D2B" }} />
+              style={{ background: "rgba(2,109,65,0.08)", color: "#026D41" }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#026D41" }} />
               {t("contact.badge") as string}
             </span>
-            <h2 className="font-black text-[#222] leading-tight mb-4" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
+            <h2 className="font-black text-[#4A4A4A] leading-tight mb-4" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
               {t("contact.title") as string}
             </h2>
-            <p className="text-[#222]/65 leading-relaxed mb-10" style={{ maxWidth: 380 }}>
+            <p className="text-[#4A4A4A]/65 leading-relaxed mb-10" style={{ maxWidth: 380 }}>
               {t("contact.subtitle") as string}
             </p>
 
@@ -79,14 +79,14 @@ export default function Contact() {
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 p-4 rounded-xl"
-                  style={{ background: "rgba(29,93,43,0.06)", border: "1px solid rgba(29,93,43,0.1)" }}>
+                  style={{ background: "rgba(2,109,65,0.06)", border: "1px solid rgba(2,109,65,0.1)" }}>
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: "#1D5D2B", color: "#F4D233" }}>
+                    style={{ background: "#026D41", color: "#FDEA02" }}>
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-xs text-[#222]/50 font-medium mb-0.5">{item.label}</p>
-                    <p className="text-sm text-[#222] font-bold">{item.value}</p>
+                    <p className="text-xs text-[#4A4A4A]/50 font-medium mb-0.5">{item.label}</p>
+                    <p className="text-sm text-[#4A4A4A] font-bold">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -97,7 +97,7 @@ export default function Contact() {
           <div className="sr flex-1 w-full">
             <div
               className="rounded-3xl p-6 sm:p-8 shadow-xl"
-              style={{ background: "#fff", border: "1.5px solid rgba(29,93,43,0.1)" }}
+              style={{ background: "#fff", border: "1.5px solid rgba(2,109,65,0.1)" }}
             >
               {state === "success" ? (
                 <motion.div
@@ -106,16 +106,16 @@ export default function Contact() {
                   className="flex flex-col items-center justify-center py-12 gap-4 text-center"
                 >
                   <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl"
-                    style={{ background: "rgba(29,93,43,0.1)" }}>
+                    style={{ background: "rgba(2,109,65,0.1)" }}>
                     ✅
                   </div>
-                  <p className="font-black text-[#1D5D2B] text-xl">{formT.success}</p>
+                  <p className="font-black text-[#026D41] text-xl">{formT.success}</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-black text-[#1D5D2B] uppercase tracking-widest">
+                      <label className="text-xs font-black text-[#026D41] uppercase tracking-widest">
                         {formT.name}
                       </label>
                       <input
@@ -128,7 +128,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-black text-[#1D5D2B] uppercase tracking-widest">
+                      <label className="text-xs font-black text-[#026D41] uppercase tracking-widest">
                         {formT.phone}
                       </label>
                       <input
@@ -142,7 +142,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-black text-[#1D5D2B] uppercase tracking-widest">
+                    <label className="text-xs font-black text-[#026D41] uppercase tracking-widest">
                       {formT.email}
                     </label>
                     <input
@@ -156,7 +156,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-black text-[#1D5D2B] uppercase tracking-widest">
+                    <label className="text-xs font-black text-[#026D41] uppercase tracking-widest">
                       {formT.message}
                     </label>
                     <textarea
@@ -171,7 +171,7 @@ export default function Contact() {
                   </div>
 
                   {state === "error" && (
-                    <p className="text-[#D92525] text-sm font-medium">{formT.error}</p>
+                    <p className="text-[#A52520] text-sm font-medium">{formT.error}</p>
                   )}
 
                   <motion.button
@@ -181,8 +181,8 @@ export default function Contact() {
                     whileTap={{ scale: state === "sending" ? 1 : 0.97 }}
                     className="w-full flex items-center justify-center gap-2 font-black py-3.5 rounded-xl text-sm transition-all"
                     style={{
-                      background: state === "sending" ? "rgba(29,93,43,0.5)" : "#1D5D2B",
-                      color: "#F4D233",
+                      background: state === "sending" ? "rgba(2,109,65,0.5)" : "#026D41",
+                      color: "#FDEA02",
                       cursor: state === "sending" ? "not-allowed" : "pointer",
                     }}
                   >

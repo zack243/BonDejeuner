@@ -43,8 +43,8 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: "#F4D233",
-        boxShadow: scrolled ? "0 2px 24px rgba(29,93,43,0.18)" : "none",
+        background: "#FDEA02",
+        boxShadow: scrolled ? "0 2px 24px rgba(2,109,65,0.18)" : "none",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,14 +63,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-0.5">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {links.map((link) => (
               <a
                 key={link.anchor}
                 href={link.anchor}
                 className="px-3 lg:px-5 py-2.5 text-[15px] lg:text-base font-semibold rounded-full transition-colors"
-                style={{ color: "#1D5D2B" }}
-                onMouseEnter={e => (e.currentTarget.style.background = "rgba(29,93,43,0.10)")}
+                style={{ color: "#026D41" }}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(2,109,65,0.10)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
                 {link.label}
@@ -86,7 +86,7 @@ export default function Navbar() {
               <button
                 onClick={() => setLangOpen(!langOpen)}
                 className="flex items-center gap-1.5 px-3.5 py-2 text-sm font-black rounded-full transition-colors"
-                style={{ background: "#1D5D2B", color: "#F4D233" }}
+                style={{ background: "#026D41", color: "#FDEA02" }}
                 aria-label="Changer de langue"
               >
                 {locale.toUpperCase()}
@@ -106,8 +106,8 @@ export default function Navbar() {
                         onClick={() => { setLocale(loc); setLangOpen(false); }}
                         className="block px-4 py-2.5 text-sm font-semibold transition-colors"
                         style={{
-                          background: locale === loc ? "rgba(29,93,43,0.08)" : "transparent",
-                          color: locale === loc ? "#1D5D2B" : "#222",
+                          background: locale === loc ? "rgba(2,109,65,0.08)" : "transparent",
+                          color: locale === loc ? "#026D41" : "#4A4A4A",
                         }}
                       >
                         {loc === "fr" ? "🇫🇷 Français" : "🇬🇧 English"}
@@ -122,7 +122,7 @@ export default function Navbar() {
             <a
               href="#produits"
               className="hidden sm:flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 font-black text-sm md:text-[15px] rounded-full transition-all whitespace-nowrap"
-              style={{ background: "#1D5D2B", color: "#F4D233", boxShadow: "0 4px 14px rgba(29,93,43,0.35)" }}
+              style={{ background: "#026D41", color: "#FDEA02", boxShadow: "0 4px 14px rgba(2,109,65,0.35)" }}
             >
               {t("nav.discover") as string}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -134,8 +134,8 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg transition-colors"
-              style={{ color: "#1D5D2B" }}
+              className="lg:hidden p-2 rounded-lg transition-colors"
+              style={{ color: "#026D41" }}
               aria-label={mobileOpen ? "Fermer" : "Menu"}
             >
               <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -151,7 +151,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t" style={{ background: "#F4D233", borderColor: "rgba(29,93,43,0.15)" }}>
+        <div className="lg:hidden border-t" style={{ background: "#FDEA02", borderColor: "rgba(2,109,65,0.15)" }}>
           <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
             {links.map((link) => (
               <a
@@ -159,7 +159,7 @@ export default function Navbar() {
                 href={link.anchor}
                 onClick={() => setMobileOpen(false)}
                 className="px-4 py-3 text-base font-semibold rounded-xl transition-colors"
-                style={{ color: "#1D5D2B" }}
+                style={{ color: "#026D41" }}
               >
                 {link.label}
               </a>
@@ -168,7 +168,7 @@ export default function Navbar() {
               href="#produits"
               onClick={() => setMobileOpen(false)}
               className="mt-2 flex items-center justify-center gap-2 px-4 py-3 font-black rounded-xl transition-colors"
-              style={{ background: "#1D5D2B", color: "#F4D233" }}
+              style={{ background: "#026D41", color: "#FDEA02" }}
             >
               {t("nav.discover") as string}
             </a>

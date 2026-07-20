@@ -35,11 +35,11 @@ const VALUE_ICONS: Record<string, React.ReactNode> = {
 };
 
 const VALUE_COLORS = [
-  { bg: "#1D5D2B", light: "#F4D233" },
-  { bg: "#F4D233", light: "#1D5D2B" },
-  { bg: "#D92525", light: "#fff" },
-  { bg: "#4F8F38", light: "#F4D233" },
-  { bg: "#F59E0B", light: "#1D5D2B" },
+  { bg: "#026D41", light: "#FDEA02" },
+  { bg: "#FDEA02", light: "#026D41" },
+  { bg: "#A52520", light: "#fff" },
+  { bg: "#4C753C", light: "#FDEA02" },
+  { bg: "#C8B612", light: "#026D41" },
 ];
 
 export default function Values() {
@@ -60,14 +60,14 @@ export default function Values() {
         {/* Header */}
         <div className="sr text-center mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5 text-xs font-black uppercase tracking-widest"
-            style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#1D5D2B" }} />
+            style={{ background: "rgba(2,109,65,0.08)", color: "#026D41" }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#026D41" }} />
             {t("values.badge") as string}
           </span>
-          <h2 className="font-black text-[#222] leading-tight mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
+          <h2 className="font-black text-[#4A4A4A] leading-tight mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
             {t("values.title") as string}
           </h2>
-          <p className="text-[#222]/60 max-w-lg mx-auto">{t("values.subtitle") as string}</p>
+          <p className="text-[#4A4A4A]/60 max-w-lg mx-auto">{t("values.subtitle") as string}</p>
         </div>
 
         {/* Values grid */}
@@ -79,8 +79,8 @@ export default function Values() {
                 key={val.key}
                 className={`sr sr-d${i + 1} group relative rounded-2xl overflow-hidden p-6 flex flex-col gap-4 cursor-default`}
                 style={{
-                  background: i === 0 ? "#FFF8EC" : (i % 2 === 0 ? "#FFF8EC" : "#fff"),
-                  border: "1.5px solid rgba(29,93,43,0.08)",
+                  background: i === 0 ? "#FFF6E1" : (i % 2 === 0 ? "#FFF6E1" : "#fff"),
+                  border: "1.5px solid rgba(2,109,65,0.08)",
                 }}
                 whileHover={{ y: -4, borderColor: color.bg + "40" }}
                 transition={{ duration: 0.3 }}
@@ -93,10 +93,10 @@ export default function Values() {
 
                 {/* Text */}
                 <div>
-                  <h3 className="font-black text-[#222] text-lg mb-2 group-hover:text-[#1D5D2B] transition-colors">
+                  <h3 className="font-black text-[#4A4A4A] text-lg mb-2 group-hover:text-[#026D41] transition-colors">
                     {val.title}
                   </h3>
-                  <p className="text-[#222]/60 text-sm leading-relaxed">{val.desc}</p>
+                  <p className="text-[#4A4A4A]/60 text-sm leading-relaxed">{val.desc}</p>
                 </div>
 
                 {/* Bottom accent line */}

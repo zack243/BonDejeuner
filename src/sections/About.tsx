@@ -16,7 +16,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="apropos" ref={sectionRef} className="overflow-hidden" style={{ background: "#1D5D2B" }}>
+    <section id="apropos" ref={sectionRef} className="overflow-hidden" style={{ background: "#026D41" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -31,7 +31,7 @@ export default function About() {
               }}
             >
               <Image
-                src="/images/poster-bondejeuner.jpg"
+                src="/poster bondejeuner.jpg"
                 alt="Bon Déjeuner — Énergie du matin pour la famille congolaise"
                 fill
                 sizes="(max-width:1024px) 80vw, 480px"
@@ -41,18 +41,18 @@ export default function About() {
               />
               {/* Subtle green vignette overlay at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-                style={{ background: "linear-gradient(to top, rgba(29,93,43,0.55), transparent)" }} />
+                style={{ background: "linear-gradient(to top, rgba(2,109,65,0.55), transparent)" }} />
               {/* Yellow accent bar */}
               <div className="absolute bottom-0 left-0 right-0 h-1.5"
-                style={{ background: "linear-gradient(90deg, #F4D233, #F59E0B)" }} />
+                style={{ background: "linear-gradient(90deg, #FDEA02, #C8B612)" }} />
             </div>
           </div>
 
           {/* Right — Text */}
           <div className="sr flex-1">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6"
-              style={{ background: "rgba(244,210,51,0.2)", color: "#F4D233", border: "1px solid rgba(244,210,51,0.3)" }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#F4D233" }} />
+              style={{ background: "rgba(253,234,2,0.2)", color: "#FDEA02", border: "1px solid rgba(253,234,2,0.3)" }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#FDEA02" }} />
               {t("about.badge") as string}
             </span>
 
@@ -86,7 +86,7 @@ export default function About() {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2.5 font-black rounded-full px-8 py-3.5 text-sm shadow-lg"
-              style={{ background: "#F4D233", color: "#1D5D2B" }}
+              style={{ background: "#FDEA02", color: "#026D41" }}
             >
               {t("about.cta") as string}
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

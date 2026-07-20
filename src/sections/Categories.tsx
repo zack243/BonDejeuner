@@ -7,19 +7,19 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { initScrollReveal } from "@/lib/scrollReveal";
 
 const CAT_PRODUCTS = [
-  { src: "/products/Bon Dejeuner Flacon D’Avoine - 500g.png", floatDelay: 0   },
-  { src: "/products/Confiture  Bon Dejeuner 4 Fruits Rouges.png", floatDelay: 0.4 },
-  { src: "/products/Lait Concentre Sucre Bon Dejeuner.png", floatDelay: 0.8 },
-  { src: "/products/Petit Beurre  Bon Dejeuner Biscuits 100g.png", floatDelay: 1.2 },
-  { src: "/products/Soya Chocolate Milk - Bon Dejeuner.png", floatDelay: 1.6 },
+  { src: "/Products/Bon Dejeuner Flacon D’Avoine - 500g.png", floatDelay: 0   },
+  { src: "/Products/Confiture  Bon Dejeuner 4 Fruits Rouges.png", floatDelay: 0.4 },
+  { src: "/Products/Lait Concentre Sucre Bon Dejeuner.png", floatDelay: 0.8 },
+  { src: "/Products/Petit Beurre  Bon Dejeuner Biscuits 100g.png", floatDelay: 1.2 },
+  { src: "/Products/Soya Chocolate Milk - Bon Dejeuner.png", floatDelay: 1.6 },
 ];
 
 const CAT_COLORS = [
-  { bg: "#F4D233", text: "#1D5D2B" },
-  { bg: "#D92525", text: "#fff"    },
-  { bg: "#1D5D2B", text: "#F4D233" },
-  { bg: "#F59E0B", text: "#1D5D2B" },
-  { bg: "#6B4423", text: "#fff"    },
+  { bg: "#FDEA02", text: "#026D41" },
+  { bg: "#A52520", text: "#fff"    },
+  { bg: "#026D41", text: "#FDEA02" },
+  { bg: "#C8B612", text: "#026D41" },
+  { bg: "#345B42", text: "#fff"    },
 ];
 
 export default function Categories() {
@@ -40,14 +40,14 @@ export default function Categories() {
         {/* Header */}
         <div className="sr text-center mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-5 text-xs font-black uppercase tracking-widest"
-            style={{ background: "rgba(29,93,43,0.08)", color: "#1D5D2B" }}>
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#1D5D2B" }} />
+            style={{ background: "rgba(2,109,65,0.08)", color: "#026D41" }}>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#026D41" }} />
             {t("categories.badge") as string}
           </span>
-          <h2 className="font-black text-[#222] leading-tight mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
+          <h2 className="font-black text-[#4A4A4A] leading-tight mb-3" style={{ fontSize: "clamp(1.8rem,4vw,3rem)" }}>
             {t("categories.title") as string}
           </h2>
-          <p className="text-[#222]/60 max-w-lg mx-auto">{t("categories.subtitle") as string}</p>
+          <p className="text-[#4A4A4A]/60 max-w-lg mx-auto">{t("categories.subtitle") as string}</p>
         </div>
 
         {/* Category cards */}
